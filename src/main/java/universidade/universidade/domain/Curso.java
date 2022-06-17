@@ -10,17 +10,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Data // getters e setters
+@NoArgsConstructor // construtor com todos os argumentos
+@AllArgsConstructor 
 @Entity
 public class Curso {
-    @Id
+    @Id // auto incremento
     @GeneratedValue(strategy = GenerationType.IDENTITY) // banco gera o id automaticamente
-    private int id;
+    private Integer id = 0;
 
     @Column(length = 50, nullable = false, unique = true) 
-    private String nome;
+    private String nome = "";
     /* 
      * length: quantidade máxima de caracteres
      * nullable: se é um campo pode ser nulo ou não (true é padrão)
@@ -28,5 +28,5 @@ public class Curso {
     */
 
     @Column(nullable = false, unique = true)
-    private int codigo;
+    private Integer codigo = 0;
 }
