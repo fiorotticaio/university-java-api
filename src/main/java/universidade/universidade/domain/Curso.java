@@ -11,8 +11,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data // getters e setters
-@NoArgsConstructor // construtor com todos os argumentos
-@AllArgsConstructor 
+@NoArgsConstructor // construtor sem nenhum argumento
+@AllArgsConstructor // construtor com todos os argumentos
 @Entity
 public class Curso {
     @Id // auto incremento
